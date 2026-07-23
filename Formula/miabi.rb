@@ -5,13 +5,13 @@
 class Miabi < Formula
   desc "Command-line client for the Miabi control panel"
   homepage "https://miabi.io"
-  version "0.6.0"
+  version "0.7.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/miabi-io/miabi-cli/releases/download/v0.6.0/miabi_0.6.0_darwin_amd64.tar.gz"
-      sha256 "a4fb2215020dafcdddfd5a7874571091075ec573576799908f92cfe6f7dafc7d"
+      url "https://github.com/miabi-io/miabi-cli/releases/download/v0.7.0/miabi_0.7.0_darwin_amd64.tar.gz"
+      sha256 "f2309e74cef7ba391d381c79ef4b8dd9361402666afcc13c4125d27d874a5e1e"
 
       define_method(:install) do
         bin.install "miabi"
@@ -19,8 +19,8 @@ class Miabi < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/miabi-io/miabi-cli/releases/download/v0.6.0/miabi_0.6.0_darwin_arm64.tar.gz"
-      sha256 "1c2e660a054d9a7df5bd09d2353f7e81f50ce5a2ce35c9bd2999dd2e58df9815"
+      url "https://github.com/miabi-io/miabi-cli/releases/download/v0.7.0/miabi_0.7.0_darwin_arm64.tar.gz"
+      sha256 "ae2358a71ea15147dd4698247ed8eb358f899a8c8b7ed91e7da60f7249e1e8eb"
 
       define_method(:install) do
         bin.install "miabi"
@@ -31,16 +31,16 @@ class Miabi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/miabi-io/miabi-cli/releases/download/v0.6.0/miabi_0.6.0_linux_amd64.tar.gz"
-      sha256 "3db342a41dff405e14af5bdff8efbd68bc8fc0ff96f2e6503bfa874bab167f06"
+      url "https://github.com/miabi-io/miabi-cli/releases/download/v0.7.0/miabi_0.7.0_linux_amd64.tar.gz"
+      sha256 "a55be50e94d6d0d13e3da20f23fa08adc2bf192645dca8d63dadde33f1a68734"
       define_method(:install) do
         bin.install "miabi"
         generate_completions_from_executable(bin/"miabi", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/miabi-io/miabi-cli/releases/download/v0.6.0/miabi_0.6.0_linux_arm64.tar.gz"
-      sha256 "3d7889f0524a40521820f8367d310e8ac412236511e7a8bdc015389cd8272ec3"
+      url "https://github.com/miabi-io/miabi-cli/releases/download/v0.7.0/miabi_0.7.0_linux_arm64.tar.gz"
+      sha256 "3e6aaff700e63d235675b3da3376ee59bb94e15cab39e3c6aba3efde32d5eb31"
       define_method(:install) do
         bin.install "miabi"
         generate_completions_from_executable(bin/"miabi", "completion")
