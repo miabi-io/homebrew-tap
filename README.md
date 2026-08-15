@@ -24,7 +24,7 @@ brew install miabi
 
 | Formula | Description                                     | Source |
 |---------|-------------------------------------------------|--------|
-| `miabi` | Command-line client for the Miabi control panel | [miabi-io/miabi-cli](https://github.com/miabi-io/miabi-cli) |
+| `miabi` | Command-line client for the Miabi control panel | [miabi-io/cli](https://github.com/miabi-io/cli) |
 
 ## Upgrade
 
@@ -44,12 +44,12 @@ brew untap miabi-io/tap   # optional: remove the tap too
 Not using Homebrew? The CLI also ships as a binary, a Go package, and a container image:
 
 ```sh
-go install github.com/miabi-io/miabi-cli@latest
+go install github.com/miabi-io/cli@latest
 ```
 
 ```sh
-docker run --rm -e MIABI_URL -e MIABI_TOKEN miabi/miabi-cli:latest whoami
+docker run --rm -e MIABI_URL -e MIABI_TOKEN miabi/cli:latest whoami
 ```
 
 Prebuilt binaries (incl. Windows) are on the
-[releases page](https://github.com/miabi-io/miabi-cli/releases/latest).
+[releases page](https://github.com/miabi-io/cli/releases/latest).
